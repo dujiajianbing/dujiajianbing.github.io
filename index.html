@@ -77,11 +77,11 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+					<a class="github" target="_blank" href="/@dujiajianbing" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="qq" target="_blank" href="#" title="qq"><i class="icon-qq"></i></a>
+					<a class="qq" target="_blank" href="/assets/qq.jpg" title="qq"><i class="icon-qq"></i></a>
 		        
-					<a class="weixin" target="_blank" href="#" title="weixin"><i class="icon-weixin"></i></a>
+					<a class="weixin" target="_blank" href="/assets/wechat.jpg" title="weixin"><i class="icon-weixin"></i></a>
 		        
 					<a class="mail" target="_blank" href="mailto:wangguanjie1001@163.com" title="mail"><i class="icon-mail"></i></a>
 		        
@@ -118,11 +118,11 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+						<a class="github" target="_blank" href="/@dujiajianbing" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="qq" target="_blank" href="#" title="qq"><i class="icon-qq"></i></a>
+						<a class="qq" target="_blank" href="/assets/qq.jpg" title="qq"><i class="icon-qq"></i></a>
 			        
-						<a class="weixin" target="_blank" href="#" title="weixin"><i class="icon-weixin"></i></a>
+						<a class="weixin" target="_blank" href="/assets/wechat.jpg" title="weixin"><i class="icon-weixin"></i></a>
 			        
 						<a class="mail" target="_blank" href="mailto:wangguanjie1001@163.com" title="mail"><i class="icon-mail"></i></a>
 			        
@@ -172,57 +172,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="搭建个人博客（Hexo-Github）"><a href="#搭建个人博客（Hexo-Github）" class="headerlink" title="搭建个人博客（Hexo+Github）"></a><center>搭建个人博客（Hexo+Github）</h1><p>Hexo作为热门的框架，有很多程序员选择使用Hexo搭建自己的博客。使用Hexo+Github，将博客部署到云端服务器上，节约了自己维护的时间，更加方便高效。</p>
-<hr>
-<h2 id="1-准备环境"><a href="#1-准备环境" class="headerlink" title="1.准备环境"></a>1.准备环境</h2><p>需要提前下载NodeJS和Git，注意版本兼容问题。</p>
-<ul>
-<li>node -v 查看Node的版本</li>
-<li>git -version 查看Git版本</li>
-</ul>
-<hr>
-<h2 id="2-安装Hexo"><a href="#2-安装Hexo" class="headerlink" title="2.安装Hexo"></a>2.安装Hexo</h2><p>需要用到npm工具，但国内npm的速度慢，可以考虑使用淘宝镜像cnpm，速度更快</p>
-<ul>
-<li>先创建一个空文件夹，用来存放博客的所有文件。</li>
-<li>安装hexo：npm i -g hexo</li>
-<li>安装好以后可以用hexo -v查看版本</li>
-<li>初始化：hexo init</li>
-<li>启动本地博客：hexo s/hexo server 本地访问地址：<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a><br>本地博客就创建好了，接下来需要把它部署到Github上。</li>
-</ul>
-<hr>
-<h2 id="3-部署Github"><a href="#3-部署Github" class="headerlink" title="3.部署Github"></a>3.部署Github</h2><p>部署到Github上更方便管理，也可以向别人展示自己的博客。</p>
-<ul>
-<li><p>首先需要创建GitHub账号。</p>
-</li>
-<li><p>在Github上创建一个新仓库，仓库名字格式统一：YourGitHubName.github.io，否则博客会出错。</p>
-</li>
-<li><p>在blog目录下安装Git部署插件：cnpm install –save hexo-deployer-git</p>
-</li>
-<li><p>配置_config.yml </p>
-<pre><code>  # Deployment
-  ## Docs: https://hexo.io/docs/deployment.html
-  deploy:
-      type: git
-       repo: https://github.com/YourGithubName/YourGithubName.github.io.git
-      branch: master
-</code></pre>
-</li>
-</ul>
-<p>这里我一开始使用了http方式部署，但一直出错，后来更换为了ssh方式就好了，具体原因暂时还没有搞懂。在用ssh方式的时候，要先配置ssh密钥，否则会出现连接错误的问题。</p>
-<ol>
-<li>检查是否有SSH Key。</li>
-<li>若没有,生成一个新的SSH Key：<del>$ ssh-keygen -t rsa -C “<a href="mailto:&#101;&#109;&#x61;&#x69;&#108;&#64;&#x67;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#99;&#111;&#109;">&#101;&#109;&#x61;&#x69;&#108;&#64;&#x67;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#99;&#111;&#109;</a>“ #github注册的邮箱</del></li>
-<li>将SSH Key添加到Github上，把id_rsa.pub公钥的内容复制进去就可以了。</li>
-</ol>
-<hr>
-<h2 id="4-将本地博客部署到Github上"><a href="#4-将本地博客部署到Github上" class="headerlink" title="4.将本地博客部署到Github上"></a>4.将本地博客部署到Github上</h2><p>依次使用如下命令，即可将本地博客推到GitHub上。</p>
-<pre><code>hexo clean    #清理一下
-hexo generate/hexo g    #生成
-hexo deploy/hexo d    #部署到远程Github仓库
-</code></pre>
-<p>等待一会后，可以通过访问<a target="_blank" rel="noopener" href="https://yourgithubname.github.io/%E6%9D%A5%E6%9F%A5%E7%9C%8B%E5%8D%9A%E5%AE%A2%E3%80%82">https://YourGithubName.github.io/来查看博客。</a></p>
-<hr>
-<p><br>博客搭建完成！但还有许多功能需要完善，这篇博客中没有图片说明，显得单调，还有博客的美化等问题，我还需要进一步学习。</p>
-
+        <h1 id="搭建个人博客（Hexo-Github）"><a href="#搭建个人博客（Hexo-Github）" class="headerlink" title="搭建个人博客（Hexo+Github）"></a><center>搭建个人博客（Hexo+Github）</h1>
+        
+          <a class="article-more-a" href="/2022/01/14/Hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/#more">more >></a>
+        
       
 
       
@@ -284,10 +237,10 @@ hexo deploy/hexo d    #部署到远程Github仓库
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="独家煎饼的第一篇博客"><a href="#独家煎饼的第一篇博客" class="headerlink" title="独家煎饼的第一篇博客"></a>独家煎饼的第一篇博客</h1><p>（不会md语法）</p>
-<hr>
-<p><a href="mailto:&#119;&#x61;&#110;&#103;&#x67;&#117;&#x61;&#110;&#106;&#105;&#x65;&#x31;&#x30;&#48;&#x31;&#64;&#49;&#x36;&#51;&#46;&#x63;&#111;&#x6d;">&#119;&#x61;&#110;&#103;&#x67;&#117;&#x61;&#110;&#106;&#105;&#x65;&#x31;&#x30;&#48;&#x31;&#64;&#49;&#x36;&#51;&#46;&#x63;&#111;&#x6d;</a></p>
-
+        <h1 id="独家煎饼的第一篇博客"><a href="#独家煎饼的第一篇博客" class="headerlink" title="独家煎饼的第一篇博客"></a>独家煎饼的第一篇博客</h1>
+        
+          <a class="article-more-a" href="/2022/01/13/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/#more">more >></a>
+        
       
 
       
