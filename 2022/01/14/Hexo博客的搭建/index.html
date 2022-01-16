@@ -16,8 +16,9 @@
 <meta property="og:description" content="搭建个人博客（Hexo+Github）">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-01-14T06:08:54.000Z">
-<meta property="article:modified_time" content="2022-01-15T10:11:57.054Z">
+<meta property="article:modified_time" content="2022-01-16T03:03:11.576Z">
 <meta property="article:author" content="WangGuanjie">
+<meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="MyBlog" type="application/atom+xml">
@@ -181,7 +182,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">589字</span>
+        <span class="post-count">578字</span>
       </span>
     </span>
 
@@ -240,7 +241,7 @@
 <p>这里我一开始使用了http方式部署，但一直出错，后来更换为了ssh方式就好了，具体原因暂时还没有搞懂。在用ssh方式的时候，要先配置ssh密钥，否则会出现连接错误的问题。</p>
 <ol>
 <li>检查是否有SSH Key。</li>
-<li>若没有,生成一个新的SSH Key：<del>$ ssh-keygen -t rsa -C “<a href="mailto:&#x65;&#109;&#x61;&#105;&#108;&#64;&#103;&#105;&#x74;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;">&#x65;&#109;&#x61;&#105;&#108;&#64;&#103;&#105;&#x74;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;</a>“ #github注册的邮箱</del></li>
+<li>若没有,生成一个新的SSH Key：<code>$ ssh-keygen -t rsa -C &quot;email@github.com&quot; #github注册的邮箱</code></li>
 <li>将SSH Key添加到Github上，把id_rsa.pub公钥的内容复制进去就可以了。</li>
 </ol>
 <hr>
@@ -260,7 +261,29 @@ hexo deploy/hexo d    #部署到远程Github仓库
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Hexo博客//" class="article-tag-list-link color2">Hexo博客</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -354,6 +377,19 @@ hexo deploy/hexo d    #部署到远程Github仓库
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88Hexo-Github%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">搭建个人博客（Hexo+Github）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%87%86%E5%A4%87%E7%8E%AF%E5%A2%83"><span class="toc-number">1.1.</span> <span class="toc-text">1.准备环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85Hexo"><span class="toc-number">1.2.</span> <span class="toc-text">2.安装Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E9%83%A8%E7%BD%B2Github"><span class="toc-number">1.3.</span> <span class="toc-text">3.部署Github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%B0%86%E6%9C%AC%E5%9C%B0%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0Github%E4%B8%8A"><span class="toc-number">1.4.</span> <span class="toc-text">4.将本地博客部署到Github上</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -466,6 +502,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">个人介绍</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
