@@ -101,9 +101,9 @@
 <meta property="og:site_name" content="WangGJ&#39;s Blog">
 <meta property="og:description" content="1.安装Django1pip install django 123456789101112c:\python39	- python.exe	- Scripts		- pip.exe		- django-admin.exe   【工具，创建django项目中的文件和文件夹】	- Lib		- 内置模块		- site-packages			- openpyxl			- python-docx			-">
 <meta property="og:locale">
-<meta property="og:image" content="http://example.com/2022/10/25/Django/10/25/Django/pycharm_django.png">
-<meta property="og:image" content="http://example.com/2022/10/25/Django/10/25/Django/pycharm_django.png">
-<meta property="og:image" content="http://example.com/2022/10/25/Django/10/25/Django/startapp.png">
+<meta property="og:image" content="http://example.com/2022/10/25/Django/pycharm_django.png">
+<meta property="og:image" content="http://example.com/2022/10/25/Django/pycharm_django.png">
+<meta property="og:image" content="http://example.com/2022/10/25/Django/startapp.png">
 <meta property="og:image" content="http://example.com/2022/10/25/Django/10/25/Django/install_app.png">
 <meta property="og:image" content="http://example.com/2022/10/25/Django/10/25/Django/url.png">
 <meta property="og:image" content="http://example.com/2022/10/25/Django/10/25/Django/view.png">
@@ -112,10 +112,10 @@
 <meta property="og:image" content="http://example.com/2022/10/25/Django/10/25/Django/makemigrations.png">
 <meta property="og:image" content="http://example.com/2022/10/25/Django/10/25/Django/migrate.png">
 <meta property="article:published_time" content="2022-10-25T08:08:37.000Z">
-<meta property="article:modified_time" content="2022-10-26T06:55:58.585Z">
+<meta property="article:modified_time" content="2022-10-26T07:07:24.222Z">
 <meta property="article:author" content="WangGuanjie">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2022/10/25/Django/10/25/Django/pycharm_django.png">
+<meta name="twitter:image" content="http://example.com/2022/10/25/Django/pycharm_django.png">
 
 
 
@@ -444,7 +444,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 如果 c:\python39\Scripts 已加入环境系统环境变量。</span><br><span class="line"></span><br><span class="line">django-admin startproject 项目名称</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h2 id="2-2-通过PyCharm创建"><a href="#2-2-通过PyCharm创建" class="headerlink" title="2.2 通过PyCharm创建"></a>2.2 通过PyCharm创建</h2><p>一开始创建project时勾选Django项目</p>
-<p><img src="10/25/Django/pycharm_django.png"></p>
+<p><img src="pycharm_django.png"></p>
 <p>特殊说明：</p>
 <ul>
 <li><p>命令行，创建的项目是标准的。</p>
@@ -461,8 +461,8 @@
 <p>默认项目的文件介绍：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mysite</span><br><span class="line">├── manage.py         【项目的管理，启动项目、创建app、数据管理】【不要动】【***常常用***】</span><br><span class="line">└── mysite</span><br><span class="line">    ├── __init__.py</span><br><span class="line">    ├── settings.py    【项目配置】          【***常常修改***】</span><br><span class="line">    ├── urls.py        【URL和函数的对应关系】【***常常修改***】</span><br><span class="line">    ├── asgi.py        【接收网络请求】【不要动】</span><br><span class="line">    └── wsgi.py        【接收网络请求】【不要动】</span><br></pre></td></tr></table></figure>
 
-<p><img src="10/25/Django/pycharm_django.png"></p>
-<h1 id="3-创建app"><a href="#3-创建app" class="headerlink" title="3.创建app"></a>3.创建app</h1><p><img src="10/25/Django/startapp.png"></p>
+<p><img src="pycharm_django.png"></p>
+<h1 id="3-创建app"><a href="#3-创建app" class="headerlink" title="3.创建app"></a>3.创建app</h1><p><img src="startapp.png"></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">- 项目</span><br><span class="line">	- app，用户管理【表结构、函数、HTML模板、CSS】</span><br><span class="line">	- app，订单管理【表结构、函数、HTML模板、CSS】</span><br><span class="line">	- app，后台管理【表结构、函数、HTML模板、CSS】</span><br><span class="line">	- app，网站   【表结构、函数、HTML模板、CSS】</span><br><span class="line">	- app，API    【表结构、函数、HTML模板、CSS】</span><br><span class="line">	..</span><br><span class="line">	</span><br><span class="line">一个app相当于一个功能模块</span><br></pre></td></tr></table></figure>
 
 
